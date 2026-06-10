@@ -1,0 +1,37 @@
+ O que eu adicionei
+
+ No HTML
+
+ Adicionei comentários ao longo do código para facilitar o entendimento de cada parte e ajudar em futuras manutenções.
+Mantive todos os comentários que já existiam, inclusive aqueles que servem como lembrete para mudanças e melhorias futuras.
+
+ No CSS
+procurei me aprofundar mais nessa aprte ,vi algumas aulas como as do canal DevClub e usei a IA
+pra dar uma pesquisada e ajudar a tirar duvidas na hora de codar. estou tentando ao maximo nao
+utilizar IA, por isso a silplicidade do site, porem to indo atras pra evoluir a pagina
+
+Troquei a antiga paleta de cores por tons de verde para combinar melhor com a identidade do projeto.
+Coloquei a logo como imagem de fundo do cabeçalho usando `background-image`.
+Adicionei um efeito escuro por cima da imagem para melhorar a visibilidade dos textos.
+Criei um efeito de vidro fosco nos botões e links para deixar o visual mais moderno.
+Ajustei os espaçamentos e alinhamentos para deixar a página mais organizada e agradável de navegar.
+
+ O que eu removi
+
+No HTML
+
+Removi a tag `<img>` que estava no topo da página, já que a logo agora aparece diretamente pelo CSS.
+Corrigi um erro onde parte do código CSS tinha sido colocada dentro do HTML por engano.
+Organizei e corrigi algumas tags para garantir que a estrutura da página funcionasse corretamente.
+
+ No CSS
+
+Removi as cores azuis que estavam sendo usadas anteriormente.
+Apaguei comentários muito grandes e divisórias desnecessárias para deixar o arquivo mais limpo.
+Removi alguns estilos repetidos que não estavam fazendo diferença no resultado final.
+
+Resumindo
+
+Meu foco foi deixar o código mais organizado, mais fácil de entender e com uma aparência mais moderna.
+ Além disso, aproveitei para corrigir alguns erros que poderiam causar problemas e melhorar a identidade visual do SIIS
+ usando tons de verde e uma interface mais agradável.

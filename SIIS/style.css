@@ -1,0 +1,242 @@
+/* Configurações Gerais e Reset*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f0fdf4; /* Fundo verde bem suave */
+    font-family: 'Segoe UI', Arial, sans-serif;
+    color: #2d3748; 
+    line-height: 1.6;
+}
+
+/* Cabeçalho da com Imagem de Fundo e Menu Abaixo*/
+.header-container {
+    /* link da sua imagem de fundo */
+    background: linear-gradient(rgba(6, 78, 59, 0.75), rgba(4, 47, 31, 0.85)), 
+                url('WhatsApp Image 2026-06-03 at 14.04.14.jpeg');
+    background-size: cover;       /* Faz com que a imagem cubra todo o espaço disponível */
+    background-position: center;  /* Centraliza o foco da imagem */
+    background-repeat: no-repeat;
+    color: white;
+    text-align: center;
+    padding: 80px 20px 60px 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.header-container h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); 
+}
+
+.header-container h3 {
+    font-size: 1.3rem;
+    font-weight: 400;
+    opacity: 0.95;
+    margin-bottom: 45px; /* Empurra os botões de navegação mais para baixo */
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* Menu de links parte dos (Botões do topo)*/
+.nav-menu {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 10px 20px;
+    border-radius: 25px;
+    background-color: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(4px); /* Efeito de vidro fosco moderno sobre o fundo */
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    transition: all 0.3s ease;
+}
+
+.nav-menu a:hover {
+    background-color: white;
+    color: #064e3b;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Layout Principal e Seções (Cards) */
+.main-container {
+    max-width: 750px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.card-section {
+    background-color: white;
+    margin-bottom: 30px;
+    padding: 35px;
+    border-radius: 16px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.card-section:hover {
+    transform: scale(1.01);
+}
+
+.card-section h2 {
+    color: #064e3b;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    position: relative;
+    padding-bottom: 8px;
+}
+
+.card-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 4px;
+    background-color: #10b981;
+    border-radius: 2px;
+}
+
+.card-section p {
+    color: #4a5568;
+    font-size: 1.05rem;
+}
+
+.features-list {
+    list-style: none;
+}
+
+.features-list li {
+    margin-bottom: 12px;
+    font-size: 1.05rem;
+    color: #4a5568;
+    display: flex;
+    align-items: flex-start;
+}
+
+.features-list li span {
+    color: #10b981;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+/*Botões Interativos parte do download)*/
+.download-box {
+    text-align: center;
+}
+
+.download-box p {
+    margin-bottom: 25px;
+}
+
+.buttons-group {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.btn {
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border-radius: 30px; 
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-android {
+    background-color: #059669;
+    box-shadow: 0 4px 6px rgba(5, 150, 105, 0.2);
+}
+
+.btn-android:hover {
+    background-color: #047857;
+    transform: translateY(-3px); 
+    box-shadow: 0 8px 15px rgba(5, 150, 105, 0.3);
+}
+
+.btn-android:active {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 6px rgba(5, 150, 105, 0.2);
+}
+
+/*Depoimentos e Contatos */
+.feedbacks-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+@media(min-width: 600px) {
+    .feedbacks-grid { grid-template-columns: 1fr 1fr; }
+}
+
+.feedback-item {
+    background-color: #f8fafc;
+    border-left: 4px solid #10b981;
+    padding: 15px;
+    border-radius: 0 12px 12px 0;
+}
+
+.feedback-item p {
+    font-style: italic;
+    font-size: 0.95rem;
+    margin-bottom: 5px;
+}
+
+.feedback-item cite {
+    font-size: 0.85rem;
+    color: #718096;
+    font-weight: 600;
+}
+
+.contato-box p {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.contato-box a {
+    color: #059669;
+    text-decoration: none;
+    font-weight: 600;
+    margin-left: 5px;
+}
+
+.contato-box a:hover {
+    text-decoration: underline;
+}
+
+/* ==========================================================================
+   Rodapé (Footer)
+   ========================================================================== */
+.footer-page {
+    background-color: #064e3b;
+    color: #a7f3d0;
+    text-align: center;
+    padding: 25px 20px;
+    margin-top: 60px;
+    font-size: 0.9rem;
+}
