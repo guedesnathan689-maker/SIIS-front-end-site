@@ -20,7 +20,7 @@ body {
 .header-container {
     /* link da sua imagem de fundo */
     background: linear-gradient(rgba(6, 78, 59, 0.75), rgba(4, 47, 31, 0.85)), 
-                url('WhatsApp Image 2026-06-03 at 14.04.14.jpeg');
+                url('logoSIIS.jpeg');
     background-size: cover;       /* Faz com que a imagem cubra todo o espaço disponível */
     background-position: center;  /* Centraliza o foco da imagem */
     background-repeat: no-repeat;
