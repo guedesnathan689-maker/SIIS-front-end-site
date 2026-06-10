@@ -27,7 +27,7 @@ Inicialmente, o projeto foi pensado para atender os estudantes da UNILAB.
 
 ---
 
-## Melhorias Implementadas
+## ultimas melhorias
 
 Durante o desenvolvimento foram realizadas diversas melhorias, incluindo:
 
