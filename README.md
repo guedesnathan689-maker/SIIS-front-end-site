@@ -51,12 +51,13 @@ O SIIS busca facilitar a rotina dos estudantes, ajudando a economizar tempo, evi
 ## Estrutura do Projeto
 
 ```text
-SIIS/
-│
+siis_oficial/
+├── .git/
+├── .gitattributes
+├── assets/
+├── src/
 ├── index.html
-├── style.css
-├── README.md
-└── assets/
+└── README.md
 ```
 
 ---
