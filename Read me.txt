@@ -3,7 +3,7 @@
 
 peguei essa semana para estudar mais sobre o Git,Github e React assistindo algumas video aulas. nao fiz
  nenhuma aplicao direta do React e do Git pretendo aplicar nessa semana apos as provas, motivo esse de
- nao ter muitas atualizaçoes no codigoooo
+ nao ter muitas atualizaçoes no codigo
 links:
 https://www.youtube.com/playlist?list=PLHz_AreHm4dm7ZULPAmadvNhH6vk9oNZA
 
