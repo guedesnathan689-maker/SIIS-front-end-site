@@ -1,4 +1,3 @@
-Aqui está uma README pronta para o seu projeto **SIIS**:
 
 # SIIS
 
@@ -70,6 +69,5 @@ siis_oficial/
 
 ## Desenvolvedor
 
-Projeto acadêmico desenvolvido por Nathan Guedes.
+Projeto acadêmico desenvolvido por estudantes da UNILAB.
 
-Para usar, basta criar ou editar o arquivo **README.md** no GitHub e colar esse conteúdo. Isso vai deixar a página principal do repositório bem mais profissional.
