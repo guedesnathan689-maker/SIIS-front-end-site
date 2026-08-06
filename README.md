@@ -1,73 +1,160 @@
+# SIIS 🍽️
 
-# SIIS
+O **SIIS** é um projeto desenvolvido para facilitar o acesso dos estudantes às informações do **Restaurante Universitário (RU)**.
 
-## Sobre o projeto
+A plataforma reúne informações sobre filas, cardápio e avaliações das refeições, permitindo que a comunidade acadêmica consulte os dados de maneira rápida, organizada e acessível.
 
-O SIIS é um aplicativo desenvolvido para ajudar estudantes universitários a acompanharem informações do Restaurante Universitário (RU) de forma rápida e prática.
+Inicialmente, o projeto foi pensado para atender os estudantes da **Universidade da Integração Internacional da Lusofonia Afro-Brasileira — UNILAB**.
 
-O objetivo do projeto é reunir dados fornecidos pela própria comunidade acadêmica e apresentá-los de maneira organizada, permitindo que os estudantes consultem informações importantes antes de se dirigirem ao restaurante.
+## 🎯 Objetivo
 
-Inicialmente, o projeto foi pensado para atender os estudantes da UNILAB.
+O SIIS busca melhorar a experiência dos estudantes no Restaurante Universitário, ajudando a:
 
----
+- Consultar o cardápio antes de ir ao RU.
+- Acompanhar a movimentação das filas.
+- Evitar horários de maior lotação.
+- Avaliar as refeições.
+- Compartilhar informações com a comunidade acadêmica.
+- Economizar tempo durante a rotina universitária.
 
-## Funcionalidades
+## ⚙️ Funcionalidades
 
-* Acompanhamento das filas do RU em tempo real.
-* Consulta do cardápio do dia.
-* Avaliação das refeições pelos estudantes.
-* Informações atualizadas pela comunidade acadêmica.
-* Interface simples e intuitiva.
+As principais funcionalidades planejadas para o SIIS são:
 
----
+- Acompanhamento das filas do RU em tempo real.
+- Consulta do cardápio do dia.
+- Avaliação das refeições pelos estudantes.
+- Atualizações enviadas pela comunidade acadêmica.
+- Interface simples, intuitiva e responsiva.
 
-## Tecnologias Utilizadas
+## 🌐 Landing page
 
-* HTML5
-* CSS3
+A landing page atual possui:
 
----
+- Navbar fixa durante a rolagem.
+- Cabeçalho com imagem de fundo.
+- Botões de download e acesso às informações.
+- Seção de apresentação do projeto.
+- Seção com as principais funcionalidades.
+- Seção explicando como o aplicativo funciona.
+- Demonstração com vídeo e imagem da interface.
+- Área de download.
+- Depoimentos e informações de contato.
+- Animações durante a rolagem.
+- Layout adaptado para computadores, tablets e celulares.
+- Atualização automática do ano no rodapé.
 
-## Melhorias Implementadas
+## 🛠️ Tecnologias utilizadas
 
-Durante o desenvolvimento foram realizadas diversas melhorias, incluindo:
+- **HTML5** — estrutura da página.
+- **CSS3** — estilos, animações e responsividade.
+- **JavaScript** — interações e comportamentos da página.
+- **Flexbox** — alinhamento dos elementos.
+- **CSS Grid** — organização das seções.
+- **Media Queries** — adaptação para diferentes telas.
+- **Git e GitHub** — controle de versão e armazenamento do projeto.
 
-* Utilização de tags semânticas (`header`, `nav`, `main` e `footer`).
-* Substituição de práticas antigas por Flexbox e Grid para alinhamento dos elementos.
-* Implementação de responsividade para dispositivos móveis através de Media Queries.
-* Criação de animações suaves e efeitos visuais modernos.
-* Organização e limpeza do código.
-* Nova identidade visual baseada em tons de verde.
+## ✨ Melhorias implementadas
 
----
+Durante o desenvolvimento, foram realizadas as seguintes melhorias:
 
-## Objetivo
+- Utilização de tags semânticas, como `header`, `nav`, `main`, `section` e `footer`.
+- Organização do código HTML, CSS e JavaScript.
+- Criação de uma navbar fixa.
+- Navegação suave entre as seções.
+- Nova identidade visual baseada em tons de verde.
+- Criação de botões com efeitos de interação.
+- Implementação da seção **Como Funciona**.
+- Inclusão de vídeo demonstrativo do aplicativo.
+- Inclusão de imagem da interface do SIIS.
+- Criação de uma moldura semelhante a um celular para o vídeo.
+- Animações das seções durante a rolagem.
+- Alteração visual da navbar ao rolar a página.
+- Atualização automática do ano no rodapé.
+- Melhorias de responsividade para dispositivos móveis.
+- Inclusão de comentários no código para facilitar sua manutenção.
 
-O SIIS busca facilitar a rotina dos estudantes, ajudando a economizar tempo, evitar filas desnecessárias e melhorar a experiência no Restaurante Universitário.
-
----
-
-## Estrutura do Projeto
+## 📁 Estrutura do projeto
 
 ```text
 siis_oficial/
-├── .git/
-├── .gitattributes
 ├── assets/
+│   ├── imagens/
+│   │   ├── logoSIIS.jpeg
+│   │   └── tela-siis.png
+│   └── videos/
+│       └── demo-siis.mp4
 ├── src/
+│   ├── css/
+│   │   └── style.css
+│   └── js/
+│       └── script.js
 ├── index.html
-└── README.md
+├── README.md
+└── .gitattributes
 ```
 
----
+## ▶️ Como executar
 
-## Status do Projeto
+### Abrindo diretamente
 
-🚧 Em desenvolvimento
+1. Baixe ou clone este repositório.
+2. Abra a pasta do projeto.
+3. Abra o arquivo `index.html` no navegador.
 
----
+### Utilizando o Live Server
 
-## Desenvolvedor
+1. Abra o projeto no Visual Studio Code.
+2. Instale a extensão **Live Server**.
+3. Clique com o botão direito no arquivo `index.html`.
+4. Selecione **Open with Live Server**.
 
-Projeto acadêmico desenvolvido por estudantes da UNILAB.
+O site será aberto em um endereço semelhante a:
 
+```text
+http://127.0.0.1:5500
+```
+
+## 📥 Como clonar o projeto
+
+```bash
+git clone URL-DO-REPOSITORIO
+```
+
+Entre na pasta:
+
+```bash
+cd siis_oficial
+```
+
+Abra no Visual Studio Code:
+
+```bash
+code .
+```
+
+## 🚀 Próximas etapas
+
+Entre as melhorias planejadas estão:
+
+- Criação de um menu hambúrguer para celulares.
+- Desenvolvimento do aplicativo móvel.
+- Implementação de login de usuários.
+- Integração com banco de dados.
+- Atualização real das filas do RU.
+- Sistema de cardápio e avaliações.
+- Painel administrativo.
+- Notificações sobre horários e movimentação.
+- Disponibilização do aplicativo para download.
+
+## 🚧 Status do projeto
+
+O projeto está **em desenvolvimento**.
+
+A landing page já possui sua estrutura principal, enquanto as funcionalidades completas do aplicativo ainda estão sendo planejadas e desenvolvidas.
+
+## 👨‍💻 Desenvolvimento
+
+Projeto acadêmico desenvolvido por estudantes da **UNILAB**.
+
+> Algumas informações, imagens, links e funcionalidades presentes na landing page são demonstrativas e poderão ser alteradas durante o desenvolvimento.
