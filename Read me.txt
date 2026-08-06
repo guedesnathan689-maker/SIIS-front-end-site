@@ -1,5 +1,236 @@
-10/06/26 5hrs de trabalho----------------------------------------------------------------------------------------------------------------------------------------
 
+06/08/2026- 5 hrs================================================
+==================================================
+
+1. ORGANIZAÇÃO COM GIT
+
+Foi explicado como criar uma nova branch para alterar o projeto sem modificar diretamente a branch principal.
+
+Criar e entrar na nova branch, porem nao utilizada ainda:
+
+git checkout -b melhorias-site
+
+Depois de concluir as mudanças:
+
+git add .
+git commit -m "Atualizações da landing page"
+
+Voltar para a branch principal:
+
+git checkout main
+
+Adicionar as mudanças da nova branch:
+
+git merge melhorias-site
+
+Enviar para o GitHub:
+
+git push origin main
+
+
+==================================================
+2. ALTERAÇÕES NO HTML
+==================================================
+
+- A navbar foi colocada fora do header.
+- A navbar agora permanece fixa durante toda a rolagem.
+- Foi adicionado o link "Como Funciona".
+- Foi adicionado o link "Demonstração".
+- Foram mantidos os links:
+  Sobre
+  Funcionalidades
+  Download
+  Contato
+
+- Foi criada a área principal do cabeçalho com a classe:
+
+hero-content
+
+- Foram adicionados dois botões no cabeçalho:
+
+Baixar App
+Saiba Mais
+
+- Foi criada a seção "Como Funciona".
+
+Essa seção possui três passos:
+
+1. Acesse o aplicativo.
+2. Consulte informações.
+3. Compartilhe experiências.
+
+- Foi criada a seção "Veja o SIIS em ação".
+
+Essa seção possui:
+
+- Um vídeo demonstrativo do aplicativo.
+- Uma imagem da interface do SIIS.
+- Uma moldura parecida com um celular.
+- Legendas abaixo do vídeo e da imagem.
+- A imagem também funciona como capa do vídeo.
+
+- Foi adicionada uma descrição do site com a tag:
+
+<meta name="description">
+
+- O arquivo JavaScript foi conectado no final do HTML:
+
+<script src="src/js/script.js"></script>
+
+- Foram adicionados comentários simples para identificar as partes principais do HTML.
+
+
+==================================================
+3. ORDEM ATUAL DO SITE
+==================================================
+
+1. Navbar
+2. Cabeçalho
+3. Sobre
+4. Funcionalidades
+5. Como Funciona
+6. Demonstração
+7. Download
+8. Depoimentos
+9. Contato
+10. Rodapé
+
+
+==================================================
+4. ORGANIZAÇÃO DOS ARQUIVOS
+==================================================
+
+Estrutura utilizada:
+
+SIIS-front-end-site/
+|
+|-- index.html
+|
+|-- assets/
+|   |
+|   |-- imagens/
+|   |   |-- logoSIIS.jpeg
+|   |   |-- tela-siis.png
+|   |
+|   |-- videos/
+|       |-- demo-siis.mp4
+|
+|-- src/
+    |
+    |-- css/
+    |   |-- style.css
+    |
+    |-- js/
+        |-- script.js
+
+Caminho da imagem:
+
+assets/imagens/tela-siis.png
+
+Caminho do vídeo:
+
+assets/videos/demo-siis.mp4
+
+
+==================================================
+5. ALTERAÇÕES NO CSS
+==================================================
+
+- A navbar recebeu:
+
+position: fixed;
+
+Isso faz com que ela continue no topo enquanto a página é rolada.
+
+- Foi adicionado um fundo verde transparente na navbar.
+- Foi adicionado efeito de desfoque no fundo.
+- A navbar fica mais escura depois que o usuário começa a rolar a página.
+- Foram adicionados efeitos nos links ao passar o mouse.
+- O cabeçalho foi aumentado e reorganizado.
+- Foram criados estilos para os botões do cabeçalho.
+- Foi criado o botão transparente "Saiba Mais".
+- Foram adicionadas sombras e animações nos botões.
+- Foram criados os cards da seção "Como Funciona".
+- Os números dos passos receberam círculos verdes.
+- Foi criada uma grade para organizar os passos.
+- Foi criado o estilo da seção de demonstração.
+- O vídeo recebeu uma moldura parecida com um celular.
+- A imagem recebeu bordas arredondadas e sombra.
+- Em celulares, o vídeo e a imagem ficam um abaixo do outro.
+- Os botões do cabeçalho ficam em coluna em telas pequenas.
+- Os textos e espaçamentos foram reduzidos para celulares.
+- Foi usado scroll-margin-top para a navbar não cobrir os títulos das seções.
+- Foram adicionados comentários nas partes importantes do CSS.
+
+
+==================================================
+6. ALTERAÇÕES NO JAVASCRIPT
+==================================================
+
+Foi criado o arquivo:
+
+src/js/script.js
+
+Funções adicionadas:
+
+1. ANIMAÇÃO DAS SEÇÕES
+
+As seções aparecem suavemente quando entram na tela.
+
+Foi usado:
+
+IntersectionObserver
+
+Quando uma seção aparece, ela recebe a classe:
+
+show
+
+
+2. EFEITO NA NAVBAR
+
+Quando o usuário rola mais de 50 pixels, a navbar recebe a classe:
+
+scrolled
+
+Isso deixa o fundo da navbar mais escuro.
+
+
+3. ANO AUTOMÁTICO NO RODAPÉ
+
+O JavaScript busca o ano atual usando:
+
+new Date().getFullYear()
+
+O rodapé é atualizado automaticamente para:
+
+© 2026 SIIS - Todos os direitos reservados.
+
+O ano será atualizado sozinho nos próximos anos.
+
+
+==================================================
+ RESULTADO ATUAL
+==================================================
+
+A landing page do SIIS agora possui:
+
+- Navbar fixa.
+- Rolagem suave.
+- Cabeçalho mais profissional.
+- Botões de ação.
+- Seção "Como Funciona".
+- Seção de demonstração.
+- Vídeo do aplicativo.
+- Imagem da interface.
+- Layout responsivo.
+- Animações ao rolar.
+- Ano automático no rodapé.
+- HTML comentado.
+- CSS comentado.
+- JavaScript comentado.
+- Estrutura de arquivos organizada.
+
+10/06/26 5hrs de trabalho----------------------------------------------------------------------------------------------------------------------------------------
 
 peguei essa semana para estudar mais sobre o Git,Github e React assistindo algumas video aulas. nao fiz
  nenhuma aplicao direta do React e do Git pretendo aplicar nessa semana apos as provas, motivo esse de

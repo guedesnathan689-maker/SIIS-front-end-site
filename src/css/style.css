@@ -1,13 +1,16 @@
+/* Configurações gerais */
 *{
     box-sizing:border-box;
     margin:0;
     padding:0;
 }
 
+/* Rolagem suave entre as seções */
 html{
     scroll-behavior:smooth;
 }
 
+/* Estilo principal da página */
 body{
     background-color:#f0fdf4;
     font-family:'Segoe UI',Arial,sans-serif;
@@ -15,45 +18,41 @@ body{
     line-height:1.6;
 }
 
+/* Cabeçalho principal com imagem de fundo */
 .header-container{
     background:
-    linear-gradient(rgba(6,78,59,.75),rgba(4,47,31,.85)),
-    url('../../assets/imagens/logoSIIS.jpeg');
-
+        linear-gradient(rgba(6,78,59,.75),rgba(4,47,31,.85)),
+        url('../../assets/imagens/logoSIIS.jpeg');
     background-size:cover;
     background-position:center;
     background-repeat:no-repeat;
-
     color:white;
     text-align:center;
-    padding:80px 20px 60px;
-
+    min-height:650px;
+    padding:120px 20px 60px;
     box-shadow:0 4px 10px rgba(0,0,0,.15);
+    position:relative;
 }
 
-.header-container h1{
-    font-size:3.5rem;
-    font-weight:800;
-    letter-spacing:2px;
-    margin-bottom:10px;
-    text-shadow:0 2px 4px rgba(0,0,0,.3);
-}
-
-.header-container h3{
-    font-size:1.3rem;
-    font-weight:400;
-    opacity:.95;
-    margin-bottom:45px;
-    text-shadow:0 1px 3px rgba(0,0,0,.3);
-}
-
+/* Menu de navegação fixo */
 .nav-menu{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
     display:flex;
     justify-content:center;
+    align-items:center;
     gap:15px;
     flex-wrap:wrap;
+    padding:15px 20px;
+    background:rgba(6,78,59,.85);
+    backdrop-filter:blur(10px);
+    box-shadow:0 3px 10px rgba(0,0,0,.15);
+    z-index:1000;
 }
 
+/* Links do menu */
 .nav-menu a{
     color:white;
     text-decoration:none;
@@ -61,93 +60,47 @@ body{
     font-size:.95rem;
     padding:10px 20px;
     border-radius:25px;
-    background-color:rgba(255,255,255,.15);
-    backdrop-filter:blur(4px);
-    border:1px solid rgba(255,255,255,.25);
     transition:.3s;
 }
 
+/* Efeito ao passar o mouse nos links */
 .nav-menu a:hover{
     background:white;
     color:#064e3b;
     transform:translateY(-3px);
-    box-shadow:0 6px 15px rgba(0,0,0,.2);
 }
 
-.main-container{
-    max-width:750px;
-    margin:40px auto;
-    padding:0 20px;
+/* Menu após a página ser rolada */
+.nav-menu.scrolled{
+    background:rgba(4,47,31,.95);
 }
 
-.card-section{
-    background:white;
-    margin-bottom:30px;
-    padding:35px;
-    border-radius:16px;
-    box-shadow:0 4px 6px rgba(0,0,0,.05),0 1px 3px rgba(0,0,0,.05);
-    transition:.3s;
+/* Título principal do cabeçalho */
+.hero-content h1{
+    font-size:3.8rem;
+    font-weight:800;
+    letter-spacing:2px;
+    margin-bottom:10px;
+    text-shadow:0 2px 4px rgba(0,0,0,.3);
 }
 
-.card-section:hover{
-    transform:scale(1.01);
+/* Subtítulo principal */
+.hero-content h3{
+    font-size:1.3rem;
+    font-weight:400;
+    margin-bottom:35px;
+    text-shadow:0 1px 3px rgba(0,0,0,.3);
 }
 
-.card-section h2{
-    color:#064e3b;
-    font-size:1.5rem;
-    margin-bottom:15px;
-    position:relative;
-    padding-bottom:8px;
-}
-
-.card-section h2::after{
-    content:'';
-    position:absolute;
-    bottom:0;
-    left:0;
-    width:40px;
-    height:4px;
-    background:#10b981;
-    border-radius:2px;
-}
-
-.card-section p{
-    color:#4a5568;
-    font-size:1.05rem;
-}
-
-.features-list{
-    list-style:none;
-}
-
-.features-list li{
-    margin-bottom:12px;
-    font-size:1.05rem;
-    color:#4a5568;
-    display:flex;
-}
-
-.features-list li span{
-    color:#10b981;
-    font-weight:bold;
-    margin-right:10px;
-}
-
-.download-box{
-    text-align:center;
-}
-
-.download-box p{
-    margin-bottom:25px;
-}
-
-.buttons-group{
+/* Grupo de botões do cabeçalho */
+.hero-buttons{
     display:flex;
     justify-content:center;
     gap:15px;
+    flex-wrap:wrap;
 }
 
+/* Estilo geral dos botões */
 .btn{
     color:white;
     padding:15px 30px;
@@ -162,15 +115,247 @@ body{
     transition:.3s;
 }
 
+/* Botão verde de download */
 .btn-android{
     background:#059669;
 }
 
+/* Efeito do botão verde */
 .btn-android:hover{
     background:#047857;
     transform:translateY(-3px);
+    box-shadow:0 8px 15px rgba(0,0,0,.2);
 }
 
+/* Botão transparente do cabeçalho */
+.btn-outline{
+    border:2px solid white;
+    background:transparent;
+}
+
+/* Efeito do botão transparente */
+.btn-outline:hover{
+    background:white;
+    color:#064e3b;
+    transform:translateY(-3px);
+}
+
+/* Área principal do conteúdo */
+.main-container{
+    max-width:750px;
+    margin:40px auto;
+    padding:0 20px;
+}
+
+/* Estilo padrão das seções */
+.card-section{
+    background:white;
+    margin-bottom:30px;
+    padding:35px;
+    border-radius:16px;
+    box-shadow:
+        0 4px 6px rgba(0,0,0,.05),
+        0 1px 3px rgba(0,0,0,.05);
+    scroll-margin-top:100px;
+    opacity:0;
+    transform:translateY(30px);
+    transition:.6s ease;
+}
+
+/* Seção visível após animação do JavaScript */
+.card-section.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* Efeito ao passar o mouse nas seções */
+.card-section:hover{
+    box-shadow:
+        0 10px 20px rgba(0,0,0,.08),
+        0 3px 6px rgba(0,0,0,.05);
+}
+
+/* Títulos das seções */
+.card-section h2{
+    color:#064e3b;
+    font-size:1.5rem;
+    margin-bottom:15px;
+    position:relative;
+    padding-bottom:8px;
+}
+
+/* Linha verde abaixo dos títulos */
+.card-section h2::after{
+    content:'';
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:40px;
+    height:4px;
+    background:#10b981;
+    border-radius:2px;
+}
+
+/* Textos das seções */
+.card-section p{
+    color:#4a5568;
+    font-size:1.05rem;
+}
+
+/* Lista de funcionalidades */
+.features-list{
+    list-style:none;
+}
+
+/* Itens da lista de funcionalidades */
+.features-list li{
+    margin-bottom:12px;
+    font-size:1.05rem;
+    color:#4a5568;
+    display:flex;
+}
+
+/* Símbolos verdes da lista */
+.features-list li span{
+    color:#10b981;
+    font-weight:bold;
+    margin-right:10px;
+}
+
+/* Área dos passos de funcionamento */
+.steps-container{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:20px;
+    margin-top:20px;
+}
+
+/* Cada passo da seção Como Funciona */
+.step-item{
+    background:#f8fafc;
+    padding:20px;
+    border-radius:12px;
+    text-align:center;
+    border-top:4px solid #10b981;
+    transition:.3s;
+}
+
+/* Efeito nos passos */
+.step-item:hover{
+    transform:translateY(-5px);
+    box-shadow:0 8px 18px rgba(0,0,0,.08);
+}
+
+/* Número de cada passo */
+.step-item span{
+    display:inline-flex;
+    width:40px;
+    height:40px;
+    align-items:center;
+    justify-content:center;
+    border-radius:50%;
+    background:#059669;
+    color:white;
+    font-weight:bold;
+    margin-bottom:10px;
+}
+
+/* Títulos dos passos */
+.step-item h3{
+    color:#064e3b;
+    margin-bottom:8px;
+}
+
+/* Seção de demonstração */
+.showcase-section{
+    text-align:center;
+}
+
+/* Centraliza a linha do título da demonstração */
+.showcase-section h2::after{
+    left:50%;
+    transform:translateX(-50%);
+}
+
+/* Texto introdutório da demonstração */
+.showcase-description{
+    max-width:620px;
+    margin:0 auto;
+}
+
+/* Organização do vídeo e da imagem */
+.app-preview-grid{
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    align-items:start;
+    gap:30px;
+    margin-top:30px;
+}
+
+/* Item de demonstração */
+.app-preview-item{
+    margin:0;
+}
+
+/* Moldura semelhante a um celular */
+.video-phone{
+    width:100%;
+    max-width:270px;
+    margin:0 auto;
+    padding:8px;
+    background:#111827;
+    border:3px solid #020617;
+    border-radius:38px;
+    box-shadow:0 18px 35px rgba(0,0,0,.2);
+}
+
+/* Vídeo do aplicativo */
+.app-video{
+    display:block;
+    width:100%;
+    aspect-ratio:9/16;
+    object-fit:cover;
+    background:#000;
+    border-radius:28px;
+}
+
+/* Imagem da interface do aplicativo */
+.app-screenshot{
+    display:block;
+    width:100%;
+    max-width:285px;
+    height:auto;
+    margin:0 auto;
+    border-radius:25px;
+    box-shadow:0 18px 35px rgba(0,0,0,.18);
+}
+
+/* Legendas do vídeo e da imagem */
+.app-preview-item figcaption{
+    margin-top:15px;
+    color:#4a5568;
+    font-size:.95rem;
+    font-weight:600;
+}
+
+/* Seção de download */
+.download-box{
+    text-align:center;
+}
+
+/* Texto da seção de download */
+.download-box p{
+    margin-bottom:25px;
+}
+
+/* Grupo de botões de download */
+.buttons-group{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+}
+
+/* Organização dos depoimentos */
 .feedbacks-grid{
     display:grid;
     grid-template-columns:1fr;
@@ -178,12 +363,7 @@ body{
     margin-top:20px;
 }
 
-@media(min-width:600px){
-    .feedbacks-grid{
-        grid-template-columns:1fr 1fr;
-    }
-}
-
+/* Caixa de cada depoimento */
 .feedback-item{
     background:#f8fafc;
     border-left:4px solid #10b981;
@@ -191,24 +371,28 @@ body{
     border-radius:0 12px 12px 0;
 }
 
+/* Texto do depoimento */
 .feedback-item p{
     font-style:italic;
     font-size:.95rem;
     margin-bottom:5px;
 }
 
+/* Nome do usuário do depoimento */
 .feedback-item cite{
     font-size:.85rem;
     color:#718096;
     font-weight:600;
 }
 
+/* Linhas da seção de contato */
 .contato-box p{
     margin-bottom:10px;
     display:flex;
     align-items:center;
 }
 
+/* Links da seção de contato */
 .contato-box a{
     color:#059669;
     text-decoration:none;
@@ -216,10 +400,12 @@ body{
     margin-left:5px;
 }
 
+/* Efeito nos links de contato */
 .contato-box a:hover{
     text-decoration:underline;
 }
 
+/* Rodapé do site */
 .footer-page{
     background:#064e3b;
     color:#a7f3d0;
@@ -227,4 +413,71 @@ body{
     padding:25px 20px;
     margin-top:60px;
     font-size:.9rem;
+}
+
+/* Ajustes para telas maiores */
+@media(min-width:600px){
+    .steps-container{
+        grid-template-columns:repeat(3,1fr);
+    }
+
+    .feedbacks-grid{
+        grid-template-columns:1fr 1fr;
+    }
+}
+
+/* Ajustes do vídeo e imagem em telas menores */
+@media(max-width:700px){
+    .app-preview-grid{
+        grid-template-columns:1fr;
+    }
+
+    .video-phone{
+        max-width:245px;
+    }
+
+    .app-screenshot{
+        max-width:260px;
+    }
+}
+
+/* Ajustes gerais para celulares */
+@media(max-width:600px){
+    .header-container{
+        min-height:550px;
+        padding:140px 20px 40px;
+    }
+
+    .hero-content h1{
+        font-size:2.8rem;
+    }
+
+    .hero-content h3{
+        font-size:1rem;
+    }
+
+    .hero-buttons{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .hero-buttons .btn{
+        width:100%;
+        max-width:280px;
+    }
+
+    .nav-menu{
+        gap:5px;
+        padding:10px;
+    }
+
+    .nav-menu a{
+        font-size:.8rem;
+        padding:8px 10px;
+    }
+
+    .card-section{
+        padding:25px;
+        scroll-margin-top:140px;
+    }
 }
