@@ -1,266 +1,1024 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-    <!-- Configurações principais da página -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta
-        name="description"
-        content="SIIS: informações sobre filas, cardápio e avaliações do Restaurante Universitário.">
 
-    <title>SIIS - Informações do RU em Tempo Real</title>
+    <meta name="description" content="SIIS - Informações do Restaurante Universitário em tempo real. Consulte filas, cardápio, avaliações e muito mais.">
+    <meta name="theme-color" content="#064e3b">
 
-    <!-- Arquivo CSS -->
+    <title>SIIS | Informações do RU em Tempo Real</title>
+
     <link rel="stylesheet" href="src/css/style.css">
 </head>
 
 <body>
-    <!-- Menu de navegação fixo -->
-    <nav class="nav-menu">
-        <a href="#sobre">Sobre</a>
-        <a href="#funcionalidades">Funcionalidades</a>
-        <a href="#como-funciona">Como Funciona</a>
-        <a href="#demonstracao">Demonstração</a>
-        <a href="#download">Download</a>
-        <a href="#contato">Contato</a>
-    </nav>
 
-    <!-- Cabeçalho principal do site -->
-    <header class="header-container">
-        <div class="hero-content">
-            <h1>SIIS</h1>
+    <!-- NAVBAR -->
+    <header class="topbar" id="topo">
+        <div class="nav-container">
 
-            <h3>
-                Filas, cardápio e avaliações do RU em um só lugar.
-            </h3>
+            <a href="#inicio" class="brand">
+                <span class="brand-icon">S</span>
 
-            <!-- Botões principais do cabeçalho -->
-            <div class="hero-buttons">
-                <a href="#download" class="btn btn-android">
-                    Baixar App
+                <div>
+                    <strong>SIIS</strong>
+                    <small>Restaurante Universitário</small>
+                </div>
+            </a>
+
+            <nav class="nav-menu" id="navMenu">
+                <a href="#sobre">Sobre</a>
+                <a href="#funcionalidades">Funcionalidades</a>
+                <a href="#como-funciona">Como funciona</a>
+                <a href="#download">Download</a>
+                <a href="#contato">Contato</a>
+            </nav>
+
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema">
+                    ☾
+                </button>
+
+                <a href="#download" class="nav-download">
+                    Baixar app
                 </a>
 
-                <a href="#sobre" class="btn btn-outline">
-                    Saiba Mais
-                </a>
+                <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
+                    ☰
+                </button>
             </div>
+
         </div>
     </header>
 
-    <!-- Conteúdo principal do site -->
-    <main class="main-container">
 
-        <!-- Seção sobre o aplicativo -->
-        <section id="sobre" class="card-section">
-            <h2>Sobre o Aplicativo</h2>
+    <!-- HERO -->
+    <main>
 
-            <p>
-                O SIIS foi criado para ajudar estudantes universitários
-                a acompanharem informações do Restaurante Universitário
-                em tempo real. Com a colaboração da própria comunidade
-                acadêmica, é possível consultar filas, cardápios e avaliações
-                das refeições de forma rápida e prática.
-            </p>
-        </section>
+        <section class="hero" id="inicio">
 
-        <!-- Seção de funcionalidades -->
-        <section id="funcionalidades" class="card-section">
-            <h2>Principais Funcionalidades</h2>
+            <div class="hero-overlay"></div>
 
-            <ul class="features-list">
-                <li>
-                    <span>✦</span>
-                    Acompanhe o nível de movimentação do RU em tempo real.
-                </li>
+            <div class="hero-container">
 
-                <li>
-                    <span>✦</span>
-                    Consulte o cardápio antes de sair de casa ou da sala de aula.
-                </li>
+                <div class="hero-content reveal">
 
-                <li>
-                    <span>✦</span>
-                    Veja avaliações feitas por outros estudantes.
-                </li>
+                    <span class="hero-badge">
+                        ● Projeto em desenvolvimento
+                    </span>
 
-                <li>
-                    <span>✦</span>
-                    Receba informações atualizadas pela comunidade universitária.
-                </li>
-            </ul>
-        </section>
+                    <h1>
+                        Seu RU.<br>
+                        <span>Mais simples.</span>
+                    </h1>
 
-        <!-- Seção explicando como o aplicativo funciona -->
-        <section id="como-funciona" class="card-section">
-            <h2>Como Funciona</h2>
-
-            <div class="steps-container">
-
-                <!-- Primeiro passo -->
-                <div class="step-item">
-                    <span>1</span>
-                    <h3>Acesse o aplicativo</h3>
-
-                    <p>
-                        Entre no SIIS utilizando seu dispositivo móvel.
+                    <p class="hero-description">
+                        Filas, cardápio e avaliações do Restaurante Universitário
+                        reunidos em um só lugar para facilitar sua rotina acadêmica.
                     </p>
-                </div>
 
-                <!-- Segundo passo -->
-                <div class="step-item">
-                    <span>2</span>
-                    <h3>Consulte informações</h3>
+                    <div class="hero-buttons">
 
-                    <p>
-                        Veja filas, cardápio e avaliações do RU.
-                    </p>
-                </div>
+                        <a href="#download" class="btn btn-primary">
+                            <span>↓</span>
+                            Baixar App
+                        </a>
 
-                <!-- Terceiro passo -->
-                <div class="step-item">
-                    <span>3</span>
-                    <h3>Compartilhe experiências</h3>
+                        <a href="#sobre" class="btn btn-secondary">
+                            Saiba mais
+                            <span>→</span>
+                        </a>
 
-                    <p>
-                        Avalie refeições e ajude outros estudantes.
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Seção de demonstração do aplicativo -->
-        <section id="demonstracao" class="card-section showcase-section">
-            <h2>Veja o SIIS em ação</h2>
-
-            <p class="showcase-description">
-                Conheça a interface do SIIS e veja como será simples acompanhar
-                a fila, consultar o cardápio e avaliar as refeições do
-                Restaurante Universitário.
-            </p>
-
-            <div class="app-preview-grid">
-
-                <!-- Vídeo de demonstração -->
-                <figure class="app-preview-item">
-                    <div class="video-phone">
-                        <video
-                            class="app-video"
-                            autoplay
-                            muted
-                            loop
-                            playsinline
-                            controls
-                            preload="metadata"
-                            poster="assets/imagens/tela-siis.png">
-
-                            <source
-                                src="assets/videos/demo-siis.mp4"
-                                type="video/mp4">
-
-                            Seu navegador não oferece suporte à reprodução de vídeos.
-                        </video>
                     </div>
 
-                    <figcaption>
-                        Demonstração do aplicativo
-                    </figcaption>
-                </figure>
+                    <div class="hero-mini-info">
+                        <span>✓ Gratuito</span>
+                        <span>✓ Feito para estudantes</span>
+                        <span>✓ Informação colaborativa</span>
+                    </div>
 
-                <!-- Imagem da interface -->
-                <figure class="app-preview-item">
-                    <img
-                        src="assets/imagens/tela-siis.png"
-                        alt="Tela principal do aplicativo SIIS mostrando a situação da fila e a avaliação da refeição"
-                        class="app-screenshot"
-                        loading="lazy">
+                </div>
 
-                    <figcaption>
-                        Interface principal do SIIS
-                    </figcaption>
-                </figure>
+
+                <!-- MOCKUP DO APP -->
+                <div class="hero-visual reveal">
+
+                    <div class="phone-decoration decoration-one"></div>
+                    <div class="phone-decoration decoration-two"></div>
+
+                    <div class="phone">
+
+                        <div class="phone-top">
+                            <span>9:41</span>
+                            <span>● ● ●</span>
+                        </div>
+
+                        <div class="app-header">
+                            <div>
+                                <small>Olá 👋</small>
+                                <h3>Como está o RU?</h3>
+                            </div>
+
+                            <div class="app-avatar">
+                                S
+                            </div>
+                        </div>
+
+                        <div class="ru-status">
+                            <span class="status-dot"></span>
+
+                            <div>
+                                <small>Movimentação agora</small>
+                                <strong>Moderada</strong>
+                            </div>
+
+                            <span class="status-time">
+                                12:34
+                            </span>
+                        </div>
+
+                        <div class="app-card menu-card">
+                            <div class="card-top">
+                                <span>🍽️</span>
+                                <small>Cardápio de hoje</small>
+                            </div>
+
+                            <h4>Almoço</h4>
+
+                            <p>
+                                Arroz, feijão, frango grelhado,
+                                salada e acompanhamento.
+                            </p>
+
+                            <button>
+                                Ver cardápio
+                            </button>
+                        </div>
+
+                        <div class="app-info-grid">
+
+                            <div class="mini-card">
+                                <span>⭐</span>
+                                <strong>4.8</strong>
+                                <small>Avaliação</small>
+                            </div>
+
+                            <div class="mini-card">
+                                <span>⏱️</span>
+                                <strong>12 min</strong>
+                                <small>Fila estimada</small>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
             </div>
+
+            <a href="#sobre" class="scroll-indicator">
+                <span></span>
+            </a>
+
         </section>
 
-        <!-- Seção de download -->
-        <section id="download" class="card-section download-box">
-            <h2>⬇ Download</h2>
 
-            <p>
-                Disponível gratuitamente para dispositivos móveis.
-            </p>
+        <!-- SOBRE -->
+        <section class="section section-light" id="sobre">
 
-            <div class="buttons-group">
-                <a href="#" class="btn btn-android">
-                    Baixar para Android
-                </a>
-            </div>
-        </section>
+            <div class="section-container about-layout">
 
-        <!-- Seção de depoimentos -->
-        <section id="depoimentos" class="card-section">
-            <h2>💬 O que os usuários dizem</h2>
+                <div class="section-heading reveal">
 
-            <div class="feedbacks-grid">
+                    <span class="eyebrow">
+                        SOBRE O SIIS
+                    </span>
 
-                <!-- Primeiro depoimento -->
-                <blockquote class="feedback-item">
-                    <p>
-                        "Aplicativo muito útil. Agora consigo organizar melhor
-                        meus horários para ir ao RU!"
+                    <h2>
+                        Menos tempo esperando.<br>
+                        <span>Mais tempo para você.</span>
+                    </h2>
+
+                </div>
+
+                <div class="about-content reveal">
+
+                    <p class="about-highlight">
+                        O SIIS foi criado para ajudar estudantes universitários
+                        a acompanharem informações importantes do Restaurante
+                        Universitário de forma rápida e prática.
                     </p>
 
-                    <cite>
-                        — Estudante de Engenharia
-                    </cite>
-                </blockquote>
-
-                <!-- Segundo depoimento -->
-                <blockquote class="feedback-item">
                     <p>
-                        "Me ajudou bastante no dia a dia a evitar as filas
-                        gigantes no horário de pico."
+                        A proposta é utilizar a colaboração da própria comunidade
+                        acadêmica para compartilhar informações sobre filas,
+                        cardápios, avaliações e movimentação do RU.
                     </p>
 
-                    <cite>
-                        — Usuária Ativa
-                    </cite>
-                </blockquote>
+                    <a href="#funcionalidades" class="text-link">
+                        Conheça as funcionalidades
+                        <span>→</span>
+                    </a>
+
+                </div>
+
             </div>
+
         </section>
 
-        <!-- Seção de contato -->
-        <section id="contato" class="card-section contato-box">
-            <h2>Contato</h2>
 
-            <p>
-                ✉
-                <a href="mailto:contato@siis.com">
-                    contato@siis.com
-                </a>
-            </p>
+        <!-- FUNCIONALIDADES -->
+        <section class="section features-section" id="funcionalidades">
 
-            <p>
-                📸
-                <a
-                    href="https://instagram.com/SIIS"
-                    target="_blank"
-                    rel="noopener noreferrer">
-                    @SIIS
-                </a>
-            </p>
+            <div class="section-container">
+
+                <div class="center-heading reveal">
+
+                    <span class="eyebrow">
+                        TUDO EM UM SÓ LUGAR
+                    </span>
+
+                    <h2>
+                        Informações que realmente<br>
+                        ajudam no seu dia.
+                    </h2>
+
+                    <p>
+                        Recursos pensados para tornar sua experiência
+                        no Restaurante Universitário mais prática.
+                    </p>
+
+                </div>
+
+
+                <div class="features-grid">
+
+                    <article class="feature-card feature-main reveal">
+
+                        <div class="feature-icon">
+                            📊
+                        </div>
+
+                        <span class="feature-label">
+                            TEMPO REAL
+                        </span>
+
+                        <h3>
+                            Veja como está<br>
+                            a fila antes de ir.
+                        </h3>
+
+                        <p>
+                            Consulte o nível de movimentação informado pela
+                            comunidade e escolha um horário melhor para ir ao RU.
+                        </p>
+
+                        <div class="queue-demo">
+
+                            <div class="queue-info">
+                                <span>Movimentação</span>
+                                <strong>Moderada</strong>
+                            </div>
+
+                            <div class="queue-bars">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="feature-card reveal">
+
+                        <div class="feature-icon">
+                            🍽️
+                        </div>
+
+                        <h3>Cardápio</h3>
+
+                        <p>
+                            Descubra o que será servido antes mesmo
+                            de chegar ao Restaurante Universitário.
+                        </p>
+
+                        <span class="card-arrow">↗</span>
+
+                    </article>
+
+
+                    <article class="feature-card reveal">
+
+                        <div class="feature-icon">
+                            ⭐
+                        </div>
+
+                        <h3>Avaliações</h3>
+
+                        <p>
+                            Veja opiniões de outros estudantes e compartilhe
+                            sua experiência com as refeições.
+                        </p>
+
+                        <span class="card-arrow">↗</span>
+
+                    </article>
+
+
+                    <article class="feature-card reveal">
+
+                        <div class="feature-icon">
+                            👥
+                        </div>
+
+                        <h3>Comunidade</h3>
+
+                        <p>
+                            Informações construídas de forma colaborativa
+                            por quem realmente utiliza o RU.
+                        </p>
+
+                        <span class="card-arrow">↗</span>
+
+                    </article>
+
+
+                    <article class="feature-card feature-green reveal">
+
+                        <div>
+
+                            <span class="feature-label light">
+                                FEITO PARA UNIVERSITÁRIOS
+                            </span>
+
+                            <h3>
+                                Uma rotina acadêmica
+                                um pouco mais simples.
+                            </h3>
+
+                        </div>
+
+                        <span class="big-symbol">
+                            S
+                        </span>
+
+                    </article>
+
+                </div>
+
+            </div>
+
         </section>
+
+
+        <!-- COMO FUNCIONA -->
+        <section class="how-section" id="como-funciona">
+
+            <div class="how-background"></div>
+
+            <div class="section-container how-container">
+
+                <div class="how-card reveal">
+
+                    <span class="eyebrow light">
+                        COMO FUNCIONA
+                    </span>
+
+                    <h2>
+                        Simples.<br>
+                        Rápido.<br>
+                        Colaborativo.
+                    </h2>
+
+                    <p>
+                        Poucos passos são suficientes para descobrir
+                        como está o Restaurante Universitário.
+                    </p>
+
+                    <a href="#download" class="btn btn-white">
+                        Quero experimentar
+                        <span>→</span>
+                    </a>
+
+                </div>
+
+
+                <div class="steps-list">
+
+                    <article class="step reveal">
+                        <span class="step-number">01</span>
+
+                        <div>
+                            <h3>Abra o SIIS</h3>
+
+                            <p>
+                                Acesse rapidamente as principais informações
+                                do Restaurante Universitário.
+                            </p>
+                        </div>
+                    </article>
+
+
+                    <article class="step reveal">
+                        <span class="step-number">02</span>
+
+                        <div>
+                            <h3>Consulte a movimentação</h3>
+
+                            <p>
+                                Veja como outros estudantes estão classificando
+                                a fila naquele momento.
+                            </p>
+                        </div>
+                    </article>
+
+
+                    <article class="step reveal">
+                        <span class="step-number">03</span>
+
+                        <div>
+                            <h3>Confira o cardápio</h3>
+
+                            <p>
+                                Saiba antecipadamente quais refeições
+                                estarão disponíveis naquele dia.
+                            </p>
+                        </div>
+                    </article>
+
+
+                    <article class="step reveal">
+                        <span class="step-number">04</span>
+
+                        <div>
+                            <h3>Escolha o melhor momento</h3>
+
+                            <p>
+                                Organize sua rotina e evite perder tempo
+                                desnecessário em filas.
+                            </p>
+                        </div>
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- EXPERIÊNCIA / PREVIEW -->
+        <section class="section experience-section">
+
+            <div class="section-container">
+
+                <div class="experience-heading reveal">
+
+                    <div>
+                        <span class="eyebrow">
+                            FEITO PARA O DIA A DIA
+                        </span>
+
+                        <h2>
+                            Informação rápida.<br>
+                            Decisão simples.
+                        </h2>
+                    </div>
+
+                    <p>
+                        O objetivo do SIIS é transformar pequenas informações
+                        da comunidade em algo útil para centenas de estudantes.
+                    </p>
+
+                </div>
+
+
+                <div class="stories">
+
+                    <article class="story-card reveal">
+
+                        <div class="story-top">
+                            <span>12:15</span>
+                            <span>RU • Agora</span>
+                        </div>
+
+                        <div class="story-icon">
+                            🟢
+                        </div>
+
+                        <h3>Fila tranquila</h3>
+
+                        <p>
+                            Bom momento para ir ao RU.
+                        </p>
+
+                    </article>
+
+
+                    <article class="story-card story-dark reveal">
+
+                        <div class="story-top">
+                            <span>12:40</span>
+                            <span>RU • Agora</span>
+                        </div>
+
+                        <div class="story-icon">
+                            🟡
+                        </div>
+
+                        <h3>Movimento moderado</h3>
+
+                        <p>
+                            Aproximadamente 12 minutos de espera.
+                        </p>
+
+                    </article>
+
+
+                    <article class="story-card reveal">
+
+                        <div class="story-top">
+                            <span>13:05</span>
+                            <span>Avaliação</span>
+                        </div>
+
+                        <div class="story-icon">
+                            ⭐
+                        </div>
+
+                        <h3>4.8 de avaliação</h3>
+
+                        <p>
+                            Refeição muito bem avaliada hoje.
+                        </p>
+
+                    </article>
+
+
+                    <article class="story-card story-accent reveal">
+
+                        <div class="story-top">
+                            <span>Hoje</span>
+                            <span>Cardápio</span>
+                        </div>
+
+                        <div class="story-icon">
+                            🍛
+                        </div>
+
+                        <h3>Almoço disponível</h3>
+
+                        <p>
+                            Confira todos os itens antes de sair.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ESTATÍSTICAS -->
+        <section class="stats-section">
+
+            <div class="section-container stats-grid">
+
+                <div class="stat reveal">
+                    <strong data-count="100">0</strong>
+                    <span>% gratuito</span>
+                </div>
+
+                <div class="stat reveal">
+                    <strong data-count="4">0</strong>
+                    <span>recursos principais</span>
+                </div>
+
+                <div class="stat reveal">
+                    <strong data-count="24">0</strong>
+                    <span>horas de acesso</span>
+                </div>
+
+                <div class="stat reveal">
+                    <strong data-count="1">0</strong>
+                    <span>comunidade conectada</span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- DOWNLOAD -->
+        <section class="section download-section" id="download">
+
+            <div class="section-container">
+
+                <div class="download-card reveal">
+
+                    <div class="download-content">
+
+                        <span class="eyebrow light">
+                            LEVE O SIIS COM VOCÊ
+                        </span>
+
+                        <h2>
+                            Seu Restaurante Universitário
+                            na palma da mão.
+                        </h2>
+
+                        <p>
+                            O SIIS está sendo desenvolvido para facilitar
+                            o acesso às informações mais importantes do RU.
+                        </p>
+
+                        <div class="download-buttons">
+
+                            <a href="#" class="store-button">
+                                <span class="store-icon">▶</span>
+
+                                <div>
+                                    <small>Em breve na</small>
+                                    <strong>Google Play</strong>
+                                </div>
+                            </a>
+
+                        </div>
+
+                        <small class="development-warning">
+                            Atualmente em desenvolvimento.
+                        </small>
+
+                    </div>
+
+
+                    <div class="download-phone">
+
+                        <div class="small-phone">
+
+                            <span class="phone-logo">
+                                SIIS
+                            </span>
+
+                            <h3>
+                                Seu RU.<br>
+                                Mais simples.
+                            </h3>
+
+                            <div class="small-phone-button">
+                                Entrar
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- DEPOIMENTOS -->
+        <section class="section testimonials-section" id="depoimentos">
+
+            <div class="section-container">
+
+                <div class="center-heading reveal">
+
+                    <span class="eyebrow">
+                        COMUNIDADE
+                    </span>
+
+                    <h2>
+                        Feito pensando em quem<br>
+                        vive a universidade.
+                    </h2>
+
+                </div>
+
+
+                <div class="testimonials-grid">
+
+                    <blockquote class="testimonial reveal">
+
+                        <div class="stars">
+                            ★★★★★
+                        </div>
+
+                        <p>
+                            “Aplicativo muito útil. Poder saber como está
+                            a fila antes de sair para o RU facilita bastante
+                            a organização do dia.”
+                        </p>
+
+                        <footer>
+                            <div class="testimonial-avatar">
+                                E
+                            </div>
+
+                            <div>
+                                <strong>Estudante</strong>
+                                <small>Engenharia</small>
+                            </div>
+                        </footer>
+
+                    </blockquote>
+
+
+                    <blockquote class="testimonial reveal">
+
+                        <div class="stars">
+                            ★★★★★
+                        </div>
+
+                        <p>
+                            “Ter cardápio, avaliação e informações da fila
+                            em um único lugar é uma ideia que pode ajudar
+                            muito no cotidiano universitário.”
+                        </p>
+
+                        <footer>
+                            <div class="testimonial-avatar">
+                                U
+                            </div>
+
+                            <div>
+                                <strong>Usuária</strong>
+                                <small>Comunidade acadêmica</small>
+                            </div>
+                        </footer>
+
+                    </blockquote>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- FAQ -->
+        <section class="section faq-section">
+
+            <div class="section-container faq-layout">
+
+                <div class="faq-heading reveal">
+
+                    <span class="eyebrow">
+                        DÚVIDAS
+                    </span>
+
+                    <h2>
+                        Perguntas<br>
+                        frequentes.
+                    </h2>
+
+                    <p>
+                        Algumas informações importantes sobre o projeto.
+                    </p>
+
+                </div>
+
+
+                <div class="faq-list">
+
+                    <article class="faq-item reveal">
+
+                        <button class="faq-question">
+                            O SIIS será gratuito?
+                            <span>+</span>
+                        </button>
+
+                        <div class="faq-answer">
+                            <p>
+                                Sim. A proposta do SIIS é oferecer gratuitamente
+                                informações úteis para a comunidade acadêmica.
+                            </p>
+                        </div>
+
+                    </article>
+
+
+                    <article class="faq-item reveal">
+
+                        <button class="faq-question">
+                            Quem atualiza as informações da fila?
+                            <span>+</span>
+                        </button>
+
+                        <div class="faq-answer">
+                            <p>
+                                A ideia é utilizar informações compartilhadas
+                                pelos próprios estudantes para estimar o nível
+                                de movimentação do RU.
+                            </p>
+                        </div>
+
+                    </article>
+
+
+                    <article class="faq-item reveal">
+
+                        <button class="faq-question">
+                            O aplicativo já está disponível?
+                            <span>+</span>
+                        </button>
+
+                        <div class="faq-answer">
+                            <p>
+                                O SIIS ainda está em desenvolvimento.
+                                A landing page será utilizada para apresentar
+                                o projeto e futuramente disponibilizar o aplicativo.
+                            </p>
+                        </div>
+
+                    </article>
+
+
+                    <article class="faq-item reveal">
+
+                        <button class="faq-question">
+                            Preciso criar uma conta?
+                            <span>+</span>
+                        </button>
+
+                        <div class="faq-answer">
+                            <p>
+                                Algumas funcionalidades poderão ser consultadas
+                                livremente, enquanto recursos colaborativos poderão
+                                exigir identificação do estudante.
+                            </p>
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CONTATO -->
+        <section class="section contact-section" id="contato">
+
+            <div class="section-container">
+
+                <div class="contact-card reveal">
+
+                    <div>
+
+                        <span class="eyebrow light">
+                            FALE COM A GENTE
+                        </span>
+
+                        <h2>
+                            Tem uma ideia para<br>
+                            melhorar o SIIS?
+                        </h2>
+
+                        <p>
+                            Sugestões e feedbacks ajudam o projeto
+                            a evoluir junto com a comunidade.
+                        </p>
+
+                    </div>
+
+
+                    <div class="contact-links">
+
+                        <a href="mailto:contato@siis.com">
+                            <span>✉</span>
+
+                            <div>
+                                <small>E-mail</small>
+                                <strong>contato@siis.com</strong>
+                            </div>
+
+                            <span>↗</span>
+                        </a>
+
+
+                        <a href="https://instagram.com/SIIS"
+                           target="_blank"
+                           rel="noopener noreferrer">
+
+                            <span>◎</span>
+
+                            <div>
+                                <small>Instagram</small>
+                                <strong>@SIIS</strong>
+                            </div>
+
+                            <span>↗</span>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
     </main>
 
-    <!-- Rodapé do site -->
+
+    <!-- FOOTER -->
     <footer class="footer-page">
-        <p>
-            © SIIS - Todos os direitos reservados.
-        </p>
+
+        <div class="footer-container">
+
+            <div class="footer-main">
+
+                <div class="footer-brand">
+
+                    <a href="#inicio" class="brand footer-logo">
+                        <span class="brand-icon">S</span>
+
+                        <div>
+                            <strong>SIIS</strong>
+                            <small>Sistema Integrado de Informações e Serviços</small>
+                        </div>
+                    </a>
+
+                    <p>
+                        Tecnologia e colaboração para facilitar
+                        a rotina universitária.
+                    </p>
+
+                </div>
+
+
+                <div class="footer-column">
+
+                    <strong>Projeto</strong>
+
+                    <a href="#sobre">Sobre</a>
+                    <a href="#funcionalidades">Funcionalidades</a>
+                    <a href="#como-funciona">Como funciona</a>
+
+                </div>
+
+
+                <div class="footer-column">
+
+                    <strong>SIIS</strong>
+
+                    <a href="#download">Download</a>
+                    <a href="#depoimentos">Comunidade</a>
+                    <a href="#contato">Contato</a>
+
+                </div>
+
+
+                <div class="footer-column">
+
+                    <strong>Redes</strong>
+
+                    <a href="#">GitHub</a>
+                    <a href="#">Instagram</a>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-bottom">
+
+                <p>
+                    © 2026 SIIS. Todos os direitos reservados.
+                </p>
+
+                <span>
+                    Feito para a comunidade universitária.
+                </span>
+
+            </div>
+
+        </div>
+
     </footer>
 
-    <!-- Arquivo JavaScript -->
-    <script src="src/js/script.js"></script>
-</body>
 
+    <!-- VOLTAR AO TOPO -->
+    <button class="back-to-top" id="backToTop" aria-label="Voltar ao topo">
+        ↑
+    </button>
+
+
+    <script src="src/js/script.js"></script>
+
+</body>
 </html>
