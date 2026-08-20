@@ -1,0 +1,190 @@
+name: Publicar versões do SIIS
+
+on:
+  push:
+    branches:
+      - main
+      - nova-landing-page
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Baixar versão original
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          path: site-antigo
+
+      - name: Baixar versão nova
+        uses: actions/checkout@v4
+        with:
+          ref: nova-landing-page
+          path: site-novo
+
+      - name: Preparar arquivos
+        run: |
+          mkdir -p public/antiga
+          mkdir -p public/nova
+
+          rsync -av \
+            --exclude='.git' \
+            --exclude='.github' \
+            site-antigo/ public/antiga/
+
+          rsync -av \
+            --exclude='.git' \
+            --exclude='.github' \
+            site-novo/ public/nova/
+
+          cat > public/index.html <<'EOF'
+          <!DOCTYPE html>
+          <html lang="pt-BR">
+          <head>
+              <meta charset="UTF-8">
+              <meta name="viewport" content="width=device-width, initial-scale=1.0">
+              <title>SIIS - Versões</title>
+
+              <style>
+                  *{
+                      box-sizing:border-box;
+                      margin:0;
+                      padding:0;
+                  }
+
+                  body{
+                      min-height:100vh;
+                      display:flex;
+                      align-items:center;
+                      justify-content:center;
+                      padding:30px;
+                      font-family:Arial,sans-serif;
+                      color:white;
+                      background:
+                          radial-gradient(circle at top right,#10b98155,transparent 35%),
+                          linear-gradient(135deg,#022c22,#064e3b);
+                  }
+
+                  .container{
+                      max-width:700px;
+                      width:100%;
+                      text-align:center;
+                  }
+
+                  h1{
+                      font-size:5rem;
+                      margin-bottom:10px;
+                  }
+
+                  p{
+                      color:#d1fae5;
+                      font-size:1.1rem;
+                      margin-bottom:40px;
+                  }
+
+                  .opcoes{
+                      display:grid;
+                      grid-template-columns:1fr 1fr;
+                      gap:20px;
+                  }
+
+                  a{
+                      background:#ffffff12;
+                      border:1px solid #ffffff30;
+                      border-radius:25px;
+                      padding:35px 20px;
+                      color:white;
+                      text-decoration:none;
+                      transition:.3s;
+                      backdrop-filter:blur(12px);
+                  }
+
+                  a:hover{
+                      background:#10b981;
+                      transform:translateY(-6px);
+                  }
+
+                  strong{
+                      display:block;
+                      font-size:1.4rem;
+                      margin-bottom:8px;
+                  }
+
+                  span{
+                      font-size:.9rem;
+                      opacity:.8;
+                  }
+
+                  @media(max-width:600px){
+                      .opcoes{
+                          grid-template-columns:1fr;
+                      }
+
+                      h1{
+                          font-size:3.5rem;
+                      }
+                  }
+              </style>
+          </head>
+
+          <body>
+
+              <main class="container">
+
+                  <h1>SIIS</h1>
+
+                  <p>
+                      Escolha qual versão da landing page deseja visualizar.
+                  </p>
+
+                  <div class="opcoes">
+
+                      <a href="./antiga/">
+                          <strong>Versão original</strong>
+                          <span>Primeira versão da landing page</span>
+                      </a>
+
+                      <a href="./nova/">
+                          <strong>Nova versão</strong>
+                          <span>Nova proposta visual do SIIS</span>
+                      </a>
+
+                  </div>
+
+              </main>
+
+          </body>
+          </html>
+          EOF
+
+      - name: Configurar GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Criar artefato
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: public
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    runs-on: ubuntu-latest
+    needs: build
+
+    steps:
+      - name: Publicar site
+        id: deployment
+        uses: actions/deploy-pages@v4
